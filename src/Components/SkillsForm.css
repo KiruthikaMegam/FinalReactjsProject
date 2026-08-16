@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.skillsFormPage {
+  width: 90%;
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.skillsFormPage h1 {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.skillsFormPage form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skillsFormPage label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.skillsFormPage input,
+.skillsFormPage textarea {
+  width: 100%;
+  padding: 15px 18px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+}
+
+.skillsFormPage input::placeholder,
+.skillsFormPage textarea::placeholder {
+  color: #cccccc;
+}
+
+.skillsFormPage textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.skillsFormPage input:focus,
+.skillsFormPage textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.skillsFormButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.skillsFormButtons button {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 7px;
+  background: #e6176e;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.skillsFormButtons button:hover {
+  background: #ff3b88;
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 20px
+    rgba(230, 23, 110, 0.25);
+}
+
+.skillsFormButtons a {
+  padding: 10px 22px;
+  border: 1px solid #e6176e;
+  border-radius: 7px;
+  color: #e6176e;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.skillsFormButtons a:hover {
+  background: #e6176e;
+  color: white;
+}
+
+.formError {
+  color: rgb(18, 4, 86);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .skillsFormPage {
+    width: 92%;
+    padding: 30px;
+  }
+
+  .skillsFormPage h1 {
+    font-size: 30px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .skillsFormPage {
+    width: 94%;
+    padding: 22px;
+  }
+
+  .skillsFormPage h1 {
+    font-size: 26px;
+  }
+
+  .skillsFormButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .skillsFormButtons button,
+  .skillsFormButtons a {
+    width: 100%;
+    text-align: center;
+  }
+
+}

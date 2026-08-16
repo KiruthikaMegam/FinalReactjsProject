@@ -1,0 +1,317 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.skillsPage {
+  min-height: 100vh;
+  padding: 60px 7%;
+}
+
+.skillsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.skillsHeader h1 {
+  font-size: 44px;
+  font-weight: 700;
+  position: relative;
+}
+
+.skillsHeader h1::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 4px;
+  background: #e6176e;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.addSkillButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #e6176e;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.addSkillButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(230, 23, 110, 0.3);
+}
+
+.addSkillIcon {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.skillCard {
+  min-height: 300px;
+  padding: 30px;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease,box-shadow 0.4s ease;
+}
+
+
+.skillCard:hover {
+  transform: translateY(-12px) rotate(0deg);
+  box-shadow: 0 25px 50px rgba(230, 23, 110, 0.15);
+}
+
+.skillCard::before {
+  counter-increment: skill;
+  content: "0" counter(skill);
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 50px;
+  font-weight: 800;
+  color:rgba(230, 23, 110, 0.08);
+}
+
+.skillsContainer {
+  counter-reset: skill;
+}
+
+.skillCard::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: -35px;
+  bottom: -35px;
+  border-radius: 50%;
+  background: #e6176e;
+  opacity: 0.12;
+}
+
+.skillCardHeader {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.skillCardHeader h2 {
+  font-size: 27px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.skillCardHeader span {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background:rgba(230, 23, 110, 0.1);
+  border: 1px solid rgba(230, 23, 110, 0.3);
+  color: #e6176e;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.skillCategory {
+  position: relative;
+  color: #e6176e;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.skillCategory::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: #e6176e;
+  margin-top: 8px;
+}
+
+.skillDescription {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.65;
+  min-height: 75px;
+  margin-bottom: 25px;
+}
+
+.skillActions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.skillActions a {
+  padding: 8px 17px;
+  border-radius: 6px;
+  background: #e6176e;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.skillActions a:hover {
+  background: #ff3b88;
+  transform: translateY(-2px);
+}
+
+.skillActions button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid #e6176e;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.skillActions button:hover {
+  background: #e6176e;
+}
+
+.skillActions button img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.confirmBox {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  width: 380px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.confirmBox h3 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: #222;
+}
+
+.confirmBox p {
+  margin-bottom: 25px;
+  color: #666;
+  font-size: 15px;
+}
+
+.confirmBox button {
+  padding: 10px 20px;
+  margin: 0 6px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.confirmBox button:first-of-type {
+  background: #e63946;
+  color: white;
+}
+
+.confirmBox button:first-of-type:hover {
+  background: #c1121f;
+}
+
+.confirmBox button:last-of-type {
+  background: #eeeeee;
+  color: #333;
+}
+
+.confirmBox button:last-of-type:hover {
+  background: #d6d6d6;
+}
+
+.confirmBox::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+@media (max-width: 1000px) {
+
+  .skillsContainer {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .skillsPage {
+    padding: 40px 5%;
+  }
+
+  .skillsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .skillsHeader h1 {
+    font-size: 35px;
+  }
+
+  .addSkillButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .skillsContainer {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .skillCard {
+    transform: none !important;
+  }
+
+  .skillCard:hover {
+    transform:
+      translateY(-8px) !important;
+  }
+
+}

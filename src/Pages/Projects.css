@@ -1,0 +1,311 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.projectsPage {
+  min-height: 100vh;
+  padding: 60px 7%;
+}
+
+.projectsPage .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.projectsPage .header h1 {
+  font-size: 44px;
+  font-weight: 700;
+  position: relative;
+}
+
+.projectsPage .header h1::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 4px;
+  background: #e6176e;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.addProjectButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #e6176e;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.addProjectButton img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.addProjectButton:hover {
+  background: #ff3b88;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(230, 23, 110, 0.25);
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.projectCard {
+  height: 330px;
+  padding: 30px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.projectCard::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: rgba(230, 23, 110, 0.07);
+  border: 1px solid rgba(230, 23, 110, 0.12);
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(230, 23, 110, 0.14);
+}
+
+.projectCard h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 25px;
+  margin-bottom: 15px;
+  padding-right: 70px;
+}
+
+.projectCard h2::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #e6176e;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.projectCard > p {
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.65;
+  margin-bottom: 20px;
+  min-height: 70px;
+}
+
+.technologyList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: auto;
+}
+
+.technologyList span {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(230, 23, 110, 0.07);
+  border: 1px solid rgba(230, 23, 110, 0.25);
+  color: #e6176e;
+  font-size: 11px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.projectCard:hover
+.technologyList span {
+  background: #e6176e;
+  color: white;
+}
+
+.projectActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.projectActions a {
+  padding: 9px 14px;
+  border-radius: 6px;
+  background: #e6176e;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+
+.projectActions a:hover {
+  background: #ff3b88;
+  transform: translateY(-2px);
+}
+
+.projectActions button {
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid #e6176e;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.projectActions button:hover {
+  background: #e6176e;
+}
+
+.projectActions button img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.confirmBox {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  width: 380px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.confirmBox h3 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: #222;
+}
+
+.confirmBox p {
+  margin-bottom: 25px;
+  color: #666;
+  font-size: 15px;
+}
+
+.confirmBox button {
+  padding: 10px 20px;
+  margin: 0 6px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.confirmBox button:first-of-type {
+  background: #e63946;
+  color: white;
+}
+
+.confirmBox button:first-of-type:hover {
+  background: #c1121f;
+}
+
+.confirmBox button:last-of-type {
+  background: #eeeeee;
+  color: #333;
+}
+
+.confirmBox button:last-of-type:hover {
+  background: #d6d6d6;
+}
+
+.confirmBox::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+@media (max-width: 800px) {
+
+  .projectsPage {
+    padding: 45px 5%;
+  }
+
+  .projectsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .projectCard {
+    height: 340px;
+    padding: 25px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .projectsPage {
+    padding: 35px 5%;
+  }
+
+  .projectsPage .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .projectsPage .header h1 {
+    font-size: 34px;
+  }
+
+  .addProjectButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .projectsContainer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projectCard {
+    height: 330px;
+  }
+
+}

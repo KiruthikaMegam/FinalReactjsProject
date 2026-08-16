@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.inactive {
+  color: #cbd5e1;
+}
+
+.active {
+  color: #E6176E;
+}
+
+.navbar a:hover {
+  color: #38e5f8;
+}
+
+.menuButton {
+  display: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    justify-content: flex-end;
+    position: relative;
+    gap: 0;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  .navLinks.navLinksOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navLinks a {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .navLinks a:hover {
+    font-size: 16px;
+    color: #38e5f8;
+    background:rgba(230, 23, 110, 0.15);
+  }
+
+}

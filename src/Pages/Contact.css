@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contactPage {
+  min-height: calc(100vh - 80px);
+  padding: 60px 8%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.contactDetails {
+  width: 380px;
+  padding: 35px 30px;
+}
+
+.contactDetails h2 {
+  margin-bottom: 35px;
+  font-size: 32px;
+  color: white;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.contactItem img {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.contactItem h4 {
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: white;
+}
+
+.contactItem a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.contactItem a:hover {
+  text-decoration: underline;
+}
+
+.textContainer {
+  width: 550px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.textContainer h2 {
+  margin-bottom: 30px;
+
+  font-size: 34px;
+  color: white;
+}
+
+.textContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.textContainer input,
+.textContainer textarea {
+  width: 100%;
+  padding: 15px 18px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+}
+
+.textContainer input::placeholder,
+.textContainer textarea::placeholder {
+  color: #cccccc;
+}
+
+.textContainer textarea {
+  height: 100px;
+  resize: none;
+}
+
+.textContainer input:focus,
+.textContainer textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.textContainer button {
+  width: 100%;
+  padding: 14px;
+  border: 0.1px solid white;
+  border-radius: 8px;
+  background:none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.textContainer button:hover {
+  background: #e6176e;
+  color: white;
+  border: 0.1px solid #e6176e;
+}
+
+.errorMessage {
+  color: rgb(18, 4, 86);
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.successMessage {
+  color: green;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .contactPage {
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 40px 6%;
+  }
+
+  .contactDetails,
+  .textContainer {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contactPage {
+    padding: 30px 20px;
+  }
+
+  .contactDetails {
+    padding: 20px 10px;
+  }
+
+  .contactDetails h2 {
+    font-size: 28px;
+  }
+
+  .textContainer {
+    padding: 25px 20px;
+  }
+
+  .textContainer h2 {
+    font-size: 27px;
+  }
+}

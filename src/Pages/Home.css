@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.homePage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 8%;
+  box-sizing: border-box;
+}
+
+.leftSide {
+  width: 50%;
+  max-width: 600px; 
+}
+
+.leftSide h2 {
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.leftSide h3 {
+  margin: 10px 0 20px;
+  font-size: 30px;
+}
+
+.leftSide p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.rightSide {
+  width: 330px;
+  height: 330px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    #ee43c3,
+    #29deeb,
+    #e6176e,
+    #29deeb
+  );
+  background-size: 300% 300%;
+  animation: borderAnimation 4s ease infinite;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.rightSide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.homeButtons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.homeButtons a {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.contactBtn,
+.projectBtn {
+  border: 2px solid white;
+  color: white;
+}
+
+.projectBtn:hover,
+.contactBtn:hover {
+  background: #e6176e;
+  border:2px solid #e6176e;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+  .homePage {
+    padding: 50px 6%;
+    gap: 40px;
+  }
+
+  .leftSide h2 {
+    font-size: 45px;
+  }
+
+  .leftSide h3 {
+    font-size: 25px;
+  }
+
+  .leftSide p {
+    font-size: 17px;
+  }
+
+  .rightSide {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .homePage {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 25px;
+    gap: 40px;
+  }
+
+  .leftSide {
+    width: 100%;
+  }
+
+  .leftSide h2 {
+    font-size: 40px;
+  }
+
+  .leftSide h3 {
+    font-size: 23px;
+  }
+
+  .leftSide p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .rightSide {
+    width: 230px;
+    height: 230px;
+  }
+
+  .homeButtons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

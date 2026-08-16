@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.projectFormPage {
+  width: 90%;
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.projectFormPage h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.projectFormPage form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.projectFormPage label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.projectFormPage input,
+.projectFormPage textarea {
+  width: 100%;
+  padding: 15px 18px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+}
+
+.projectFormPage textarea {
+  min-height: 110px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.projectFormPage input:focus,
+.projectFormPage textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.projectFormPage input::placeholder,
+.projectFormPage textarea::placeholder {
+  color: #cccccc;
+}
+
+.formButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.formButtons button {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 7px;
+  background: #e6176e;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formButtons button:hover {
+  background: #ff3b88;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(230, 23, 110, 0.25);
+}
+
+.formButtons a {
+  padding: 10px 22px;
+  border: 1px solid #e6176e;
+  border-radius: 7px;
+  color: #e6176e;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.formButtons a:hover {
+  background: #e6176e;
+  color: white;
+}
+
+.formError {
+  color: rgb(18, 4, 86);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .projectFormPage {
+    width: 92%;
+    padding: 30px;
+  }
+
+  .projectFormPage h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .projectFormPage {
+    width: 94%;
+    padding: 22px;
+  }
+
+  .projectFormPage h1 {
+    font-size: 26px;
+  }
+
+  .formButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .formButtons button,
+  .formButtons a {
+    width: 100%;
+    text-align: center;
+  }
+}
