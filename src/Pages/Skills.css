@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   margin-bottom: 60px;
 }
 
@@ -35,6 +36,7 @@
 .addSkillButton {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 12px 20px;
   background: #e6176e;
@@ -43,12 +45,13 @@
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .addSkillButton:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(230, 23, 110, 0.3);
+  box-shadow:
+    0 10px 25px rgba(230, 23, 110, 0.3);
 }
 
 .addSkillIcon {
@@ -61,21 +64,25 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 35px;
+  counter-reset: skill;
 }
 
 .skillCard {
   min-height: 300px;
   padding: 30px;
   position: relative;
+  display: flex;
+  flex-direction: column;
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease,box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-
 .skillCard:hover {
-  transform: translateY(-12px) rotate(0deg);
+  transform: translateY(-12px);
   box-shadow: 0 25px 50px rgba(230, 23, 110, 0.15);
 }
 
@@ -87,11 +94,7 @@
   right: 25px;
   font-size: 50px;
   font-weight: 800;
-  color:rgba(230, 23, 110, 0.08);
-}
-
-.skillsContainer {
-  counter-reset: skill;
+  color: rgba(230, 23, 110, 0.08);
 }
 
 .skillCard::after {
@@ -122,7 +125,7 @@
   display: inline-block;
   padding: 5px 12px;
   border-radius: 20px;
-  background:rgba(230, 23, 110, 0.1);
+  background: rgba(230, 23, 110, 0.1);
   border: 1px solid rgba(230, 23, 110, 0.3);
   color: #e6176e;
   font-size: 11px;
@@ -160,39 +163,57 @@
 
 .skillActions {
   position: relative;
+
   display: flex;
+
   align-items: center;
+
   gap: 10px;
+
   margin-top: auto;
 }
 
 .skillActions a {
   padding: 8px 17px;
+
   border-radius: 6px;
+
   background: #e6176e;
+
   color: white;
+
   text-decoration: none;
+
   font-size: 12px;
   font-weight: 600;
-  transition: 0.3s;
+
+  transition: 0.3s ease;
 }
 
 .skillActions a:hover {
   background: #ff3b88;
+
   transform: translateY(-2px);
 }
 
 .skillActions button {
   width: 36px;
   height: 36px;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   border-radius: 6px;
+
   border: 1px solid #e6176e;
+
   background: transparent;
+
   cursor: pointer;
-  transition: 0.3s;
+
+  transition: 0.3s ease;
 }
 
 .skillActions button:hover {
@@ -202,116 +223,230 @@
 .skillActions button img {
   width: 16px;
   height: 16px;
+
   object-fit: contain;
 }
 
-.confirmBox {
-  position: fixed;
-  top: 30%;
-  left: 40%;
-  width: 380px;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
-  z-index: 1000;
-}
-
-.confirmBox h3 {
-  margin: 0 0 12px;
-  font-size: 24px;
-  color: #222;
-}
-
-.confirmBox p {
-  margin-bottom: 25px;
-  color: #666;
-  font-size: 15px;
-}
-
-.confirmBox button {
-  padding: 10px 20px;
-  margin: 0 6px;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.confirmBox button:first-of-type {
-  background: #e63946;
-  color: white;
-}
-
-.confirmBox button:first-of-type:hover {
-  background: #c1121f;
-}
-
-.confirmBox button:last-of-type {
-  background: #eeeeee;
-  color: #333;
-}
-
-.confirmBox button:last-of-type:hover {
-  background: #d6d6d6;
-}
-
-.confirmBox::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: -1;
-}
-
-@media (max-width: 1000px) {
-
-  .skillsContainer {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-}
-
-@media (max-width: 650px) {
+@media (max-width: 1100px) and (min-width: 769px) {
 
   .skillsPage {
-    padding: 40px 5%;
+    padding: 50px 5%;
   }
 
   .skillsHeader {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    margin-bottom: 45px;
   }
 
   .skillsHeader h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .addSkillButton {
-    width: 100%;
-    justify-content: center;
+    padding: 11px 17px;
   }
 
   .skillsContainer {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+
     gap: 25px;
   }
 
   .skillCard {
-    transform: none !important;
+    min-height: 290px;
+
+    padding: 25px;
+  }
+
+  .skillCardHeader h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 551px) {
+
+  .skillsPage {
+    padding: 45px 5%;
+  }
+
+  .skillsHeader {
+    margin-bottom: 40px;
+  }
+
+  .skillsHeader h1 {
+    font-size: 36px;
+  }
+
+  .addSkillButton {
+    padding: 10px 16px;
+
+    font-size: 13px;
+  }
+
+  .addSkillIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .skillsContainer {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+  }
+
+  .skillCard {
+    min-height: 280px;
+
+    padding: 22px;
+
+    border-radius: 20px;
+  }
+
+  .skillCardHeader {
+    margin-bottom: 20px;
+  }
+
+  .skillCardHeader h2 {
+    font-size: 22px;
+  }
+
+  .skillCategory {
+    font-size: 12px;
+  }
+
+  .skillDescription {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .skillCard::before {
+    font-size: 40px;
+
+    top: 15px;
+    right: 18px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .skillsPage {
+    padding: 35px 5%;
+  }
+
+  .skillsHeader {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+  }
+
+  .skillsHeader h1 {
+    font-size: 32px;
+  }
+
+  .skillsHeader h1::after {
+    width: 45px;
+
+    height: 3px;
+
+    margin-top: 7px;
+  }
+
+  .addSkillButton {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    gap: 0;
+
+    border-radius: 50%;
+  }
+
+  .addSkillButton span {
+    display: none;
+  }
+
+  .addSkillIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .skillsContainer {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .skillCard {
+    min-height: 280px;
+
+    padding: 24px;
+
+    border-radius: 20px;
   }
 
   .skillCard:hover {
-    transform:
-      translateY(-8px) !important;
+    transform: translateY(-6px);
+
+    box-shadow:
+      0 20px 40px rgba(230, 23, 110, 0.15);
   }
 
+  .skillCardHeader {
+    margin-bottom: 20px;
+  }
+
+  .skillCardHeader h2 {
+    font-size: 23px;
+  }
+
+  .skillCardHeader span {
+    font-size: 10px;
+
+    padding: 5px 10px;
+  }
+
+  .skillCategory {
+    font-size: 11px;
+
+    margin-bottom: 12px;
+  }
+
+  .skillDescription {
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    min-height: auto;
+
+    margin-bottom: 20px;
+  }
+
+  .skillActions {
+    gap: 8px;
+  }
+
+  .skillActions a {
+    padding: 8px 14px;
+
+    font-size: 11px;
+  }
+
+  .skillActions button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .skillCard::before {
+    font-size: 40px;
+
+    top: 15px;
+    right: 18px;
+  }
 }

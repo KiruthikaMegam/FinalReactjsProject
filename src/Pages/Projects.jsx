@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import { Link } from "react-router-dom";
 import './Projects.css'
 import Delete from '../assets/delete.png'
@@ -9,43 +9,19 @@ import { ProjectContext } from "../Context/ProjectContext";
 export default function Projects() {
   const { projects, deleteProject} = useContext(ProjectContext);
 
-  const [deleteId, setDeleteId] = useState(null);
-  const [showConfirm, setShowConfirm] = useState(false);
-  
   const handleDelete = (id) => {
-    setDeleteId(id);
-    setShowConfirm(true);
-  };
-  
-  const confirmDelete = () => {
-    deleteProject(deleteId);
-    setShowConfirm(false);
-    setDeleteId(null);
+  deleteProject(id);
+  alert("Project deleted successfully!");
   };
 
   return (
     <div className="projectsPage">
-
-      {showConfirm && (
-        <div className="confirmBox">
-          <h3>Delete Project?</h3>
-          <p>Are you sure you want to delete this project?</p>
-          <button onClick={confirmDelete}>
-            Yes, Delete
-          </button>
-          <button onClick={() => {
-              setShowConfirm(false);
-              setDeleteId(null);
-            }}>
-            Cancel
-          </button>
-        </div>
-      )}
-
+     
       <div className="header">
         <h1>My Projects</h1>
         <Link to="/Projects/Add" className="addProjectButton">
-        <img src={Add} alt="" />Add Project
+        <img src={Add} alt="" />
+        <span>Add Project</span>
         </Link>
       </div>
 

@@ -1,311 +1,462 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
 }
 
-.projectsPage {
-  min-height: 100vh;
-  padding: 60px 7%;
+.projectsPage{
+  min-height:100vh;
+  padding:60px 7%;
 }
 
-.projectsPage .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
+.projectsPage .header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:50px;
 }
 
-.projectsPage .header h1 {
-  font-size: 44px;
-  font-weight: 700;
-  position: relative;
+.projectsPage .header h1{
+  font-size:44px;
+  font-weight:700;
+  position:relative;
 }
 
-.projectsPage .header h1::after {
-  content: "";
-  display: block;
-  width: 55px;
-  height: 4px;
-  background: #e6176e;
-  border-radius: 10px;
-  margin-top: 10px;
+.projectsPage .header h1::after{
+  content:"";
+  display:block;
+  width:55px;
+  height:4px;
+  background:#e6176e;
+  border-radius:10px;
+  margin-top:10px;
 }
 
-.addProjectButton {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  background: #e6176e;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: 0.3s;
+.addProjectButton{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 20px;
+  background:#e6176e;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:600;
+  transition:0.3s ease;
 }
 
-.addProjectButton img {
-  width: 17px;
-  height: 17px;
-  object-fit: contain;
+.addProjectButton img{
+  width:17px;
+  height:17px;
+  object-fit:contain;
 }
 
-.addProjectButton:hover {
-  background: #ff3b88;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(230, 23, 110, 0.25);
+.addProjectButton:hover{
+  background:#ff3b88;
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(230,23,110,0.25);
 }
 
-.projectsContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+.projectsContainer{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
 }
 
-.projectCard {
-  height: 330px;
-  padding: 30px;
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-  display: flex;
-  flex-direction: column;
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+.projectCard{
+  min-height:330px;
+  padding:30px;
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+  display:flex;
+  flex-direction:column;
+  transition:transform 0.4s ease,box-shadow 0.4s ease;
 }
 
-.projectCard::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  background: rgba(230, 23, 110, 0.07);
-  border: 1px solid rgba(230, 23, 110, 0.12);
+.projectCard:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 50px rgba(230,23,110,0.14);
 }
 
-.projectCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(230, 23, 110, 0.14);
+.projectCard h2{
+  position:relative;
+  z-index:2;
+  font-size:25px;
+  margin-bottom:15px;
+  padding-right:70px;
+  line-height:1.3;
 }
 
-.projectCard h2 {
-  position: relative;
-  z-index: 2;
-  font-size: 25px;
-  margin-bottom: 15px;
-  padding-right: 70px;
+.projectCard h2::before{
+  content:"";
+  display:inline-block;
+  width:8px;
+  height:8px;
+  background:#e6176e;
+  border-radius:50%;
+  margin-right:10px;
+  vertical-align:middle;
 }
 
-.projectCard h2::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: #e6176e;
-  border-radius: 50%;
-  margin-right: 10px;
-  vertical-align: middle;
+.projectCard>p{
+  position:relative;
+  z-index:2;
+  font-size:14px;
+  line-height:1.7;
+  opacity:0.65;
+  margin-bottom:20px;
+  min-height:70px;
 }
 
-.projectCard > p {
-  position: relative;
-  z-index: 2;
-  font-size: 14px;
-  line-height: 1.7;
-  opacity: 0.65;
-  margin-bottom: 20px;
-  min-height: 70px;
+.technologyList{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:auto;
 }
 
-.technologyList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: auto;
+.technologyList span{
+  padding:6px 12px;
+  border-radius:20px;
+  background:rgba(230,23,110,0.07);
+  border:1px solid rgba(230,23,110,0.25);
+  color:#e6176e;
+  font-size:11px;
+  font-weight:600;
+  transition:0.3s ease;
 }
 
-.technologyList span {
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: rgba(230, 23, 110, 0.07);
-  border: 1px solid rgba(230, 23, 110, 0.25);
-  color: #e6176e;
-  font-size: 11px;
-  font-weight: 600;
-  transition: 0.3s;
+.projectCard:hover .technologyList span{
+  background:#e6176e;
+  color:white;
 }
 
-.projectCard:hover
-.technologyList span {
-  background: #e6176e;
-  color: white;
+.projectActions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:20px;
 }
 
-.projectActions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 20px;
+.projectActions a{
+  padding:9px 14px;
+  border-radius:6px;
+  background:#e6176e;
+  color:white;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:600;
+  transition:0.3s ease;
 }
 
-.projectActions a {
-  padding: 9px 14px;
-  border-radius: 6px;
-  background: #e6176e;
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 600;
-  transition: 0.3s;
+.projectActions a:hover{
+  background:#ff3b88;
+  transform:translateY(-2px);
 }
 
-
-.projectActions a:hover {
-  background: #ff3b88;
-  transform: translateY(-2px);
+.projectActions button{
+  width:37px;
+  height:37px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  border:1px solid #e6176e;
+  background:transparent;
+  cursor:pointer;
+  transition:0.3s ease;
 }
 
-.projectActions button {
-  width: 37px;
-  height: 37px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  border: 1px solid #e6176e;
-  background: transparent;
-  cursor: pointer;
-  transition: 0.3s;
+.projectActions button:hover{
+  background:#e6176e;
 }
 
-.projectActions button:hover {
-  background: #e6176e;
+.projectActions button img{
+  width:16px;
+  height:16px;
+  object-fit:contain;
 }
 
-.projectActions button img {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-}
-
-.confirmBox {
-  position: fixed;
-  top: 30%;
-  left: 40%;
-  width: 380px;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
-  z-index: 1000;
-}
-
-.confirmBox h3 {
-  margin: 0 0 12px;
-  font-size: 24px;
-  color: #222;
-}
-
-.confirmBox p {
-  margin-bottom: 25px;
-  color: #666;
-  font-size: 15px;
-}
-
-.confirmBox button {
-  padding: 10px 20px;
-  margin: 0 6px;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.confirmBox button:first-of-type {
-  background: #e63946;
-  color: white;
-}
-
-.confirmBox button:first-of-type:hover {
-  background: #c1121f;
-}
-
-.confirmBox button:last-of-type {
-  background: #eeeeee;
-  color: #333;
-}
-
-.confirmBox button:last-of-type:hover {
-  background: #d6d6d6;
-}
-
-.confirmBox::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: -1;
-}
-
-@media (max-width: 800px) {
-
-  .projectsPage {
-    padding: 45px 5%;
+@media (max-width:1000px) and (min-width:769px){
+  .projectsPage{
+    padding:50px 5%;
   }
 
-  .projectsContainer {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  .projectsPage .header{
+    margin-bottom:40px;
   }
 
-  .projectCard {
-    height: 340px;
-    padding: 25px;
+  .projectsPage .header h1{
+    font-size:40px;
   }
 
+  .addProjectButton{
+    padding:11px 17px;
+    font-size:13px;
+  }
+
+  .projectsContainer{
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+  }
+
+  .projectCard{
+    min-height:310px;
+    padding:25px;
+    border-radius:18px;
+  }
+
+  .projectCard h2{
+    font-size:21px;
+    padding-right:40px;
+    margin-bottom:13px;
+  }
+
+  .projectCard h2::before{
+    width:7px;
+    height:7px;
+    margin-right:8px;
+  }
+
+  .projectCard>p{
+    font-size:13px;
+    line-height:1.6;
+    min-height:65px;
+  }
+
+  .technologyList{
+    gap:6px;
+  }
+
+  .technologyList span{
+    padding:5px 10px;
+    font-size:10px;
+  }
 }
 
-@media (max-width: 600px) {
-
-  .projectsPage {
-    padding: 35px 5%;
+@media (max-width:768px) and (min-width:551px){
+  .projectsPage{
+    padding:45px 5%;
   }
 
-  .projectsPage .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+  .projectsPage .header{
+    margin-bottom:35px;
   }
 
-  .projectsPage .header h1 {
-    font-size: 34px;
+  .projectsPage .header h1{
+    font-size:36px;
   }
 
-  .addProjectButton {
-    width: 100%;
-    justify-content: center;
+  .projectsPage .header h1::after{
+    width:45px;
+    height:3px;
+    margin-top:8px;
   }
 
-  .projectsContainer {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .addProjectButton{
+    padding:10px 15px;
+    font-size:12px;
   }
 
-  .projectCard {
-    height: 330px;
+  .addProjectButton img{
+    width:16px;
+    height:16px;
   }
 
+  .projectsContainer{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+  }
+
+  .projectCard{
+    min-height:300px;
+    padding:22px;
+    border-radius:18px;
+  }
+
+  .projectCard h2{
+    font-size:19px;
+    line-height:1.3;
+    padding-right:20px;
+    margin-bottom:12px;
+  }
+
+  .projectCard h2::before{
+    width:6px;
+    height:6px;
+    margin-right:7px;
+  }
+
+  .projectCard>p{
+    font-size:12px;
+    line-height:1.6;
+    min-height:65px;
+    margin-bottom:15px;
+  }
+
+  .technologyList{
+    gap:6px;
+  }
+
+  .technologyList span{
+    padding:5px 9px;
+    font-size:9px;
+  }
+
+  .projectActions{
+    margin-top:15px;
+  }
+
+  .projectActions a{
+    padding:8px 12px;
+    font-size:11px;
+  }
+
+  .projectActions button{
+    width:34px;
+    height:34px;
+  }
+
+  .projectActions button img{
+    width:14px;
+    height:14px;
+  }
+}
+
+@media (max-width:550px){
+  .projectsPage{
+    padding:35px 5%;
+  }
+
+  .projectsPage .header{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+  }
+
+  .projectsPage .header h1{
+    font-size:32px;
+  }
+
+  .projectsPage .header h1::after{
+    width:42px;
+    height:3px;
+    margin-top:7px;
+  }
+
+  .addProjectButton{
+    width:42px;
+    height:42px;
+    padding:0;
+    gap:0;
+    border-radius:50%;
+  }
+
+  .addProjectButton span{
+    display:none;
+  }
+
+  .addProjectButton img{
+    width:19px;
+    height:19px;
+  }
+
+  .projectsContainer{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .projectCard{
+    min-height:300px;
+    padding:23px;
+    border-radius:18px;
+  }
+
+  .projectCard h2{
+    font-size:20px;
+    line-height:1.3;
+    padding-right:35px;
+    margin-bottom:12px;
+  }
+
+  .projectCard h2::before{
+    width:7px;
+    height:7px;
+    margin-right:8px;
+  }
+
+  .projectCard>p{
+    font-size:13px;
+    line-height:1.7;
+    min-height:auto;
+    margin-bottom:18px;
+  }
+
+  .technologyList{
+    gap:6px;
+  }
+
+  .technologyList span{
+    padding:5px 10px;
+    font-size:10px;
+  }
+
+  .projectActions{
+    margin-top:18px;
+    gap:8px;
+  }
+
+  .projectActions a{
+    padding:8px 13px;
+    font-size:11px;
+  }
+
+  .projectActions button{
+    width:34px;
+    height:34px;
+  }
+
+  .projectActions button img{
+    width:14px;
+    height:14px;
+  }
+}
+
+@media (max-width:400px){
+  .projectsPage{
+    padding:30px 5%;
+  }
+
+  .projectsPage .header h1{
+    font-size:28px;
+  }
+
+  .addProjectButton{
+    width:40px;
+    height:40px;
+  }
+
+  .projectCard{
+    padding:20px;
+    min-height:290px;
+  }
+
+  .projectCard h2{
+    font-size:18px;
+    padding-right:20px;
+  }
+
+  .projectCard>p{
+    font-size:12px;
+  }
+
+  .technologyList span{
+    font-size:9px;
+    padding:5px 8px;
+  }
 }

@@ -8,16 +8,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
   position: relative;
 }
 
+.navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
 .navbar a {
+  position: relative;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 15px;
   font-size: 18px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .inactive {
@@ -28,6 +35,11 @@
   color: #E6176E;
 }
 
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 70%;
+}
+
 .navbar a:hover {
   color: #38e5f8;
 }
@@ -36,18 +48,25 @@
   display: none;
   border: none;
   background: transparent;
-  color: white;
-  font-size: 28px;
   cursor: pointer;
   padding: 5px;
+}
+
+.menuButton img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.menuButton:hover img {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
 
   .navbar {
     justify-content: flex-end;
-    position: relative;
-    gap: 0;
   }
 
   .menuButton {
@@ -56,20 +75,20 @@
 
   .navLinks {
     position: absolute;
-    top: 45px;
-    right: 0;
-    width: 210px;
+    top: 50px;
+    right: -20px;
+    width: 320px;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     gap: 5px;
     padding: 12px;
-    background: rgba(0, 0, 0, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(56, 229, 248, 0.1);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: 0.3s;
+    transition: all 0.3s ease;
     z-index: 1000;
   }
 
@@ -81,15 +100,22 @@
 
   .navLinks a {
     width: 100%;
-    padding: 10px 12px;
+    padding: 12px 15px;
     font-size: 16px;
-    border-radius: 6px;
+    border-radius: 8px;
+  }
+
+  .navLinks a::after {
+    display: none;
   }
 
   .navLinks a:hover {
-    font-size: 16px;
     color: #38e5f8;
-    background:rgba(230, 23, 110, 0.15);
+    background: rgba(230, 23, 110, 0.15);
   }
 
+  .navLinks a.active {
+    color: #E6176E;
+    background: rgba(230, 23, 110, 0.1);
+  }
 }

@@ -4,7 +4,37 @@ export const ProjectContext = createContext();
 
 const initialProjects = [
   {
-    id: 1,
+  id: 1,
+  title: "Personal Portfolio Website",
+  description:
+    "A responsive portfolio website to showcase my skills, projects, and professional information.",
+  details:
+    "A React-based personal portfolio website with separate sections for home, about, skills, projects, project details, and contact.",
+  technologies: [
+    "React.js",
+    "React Router",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Context API"
+  ],
+  features: [
+    "Home page",
+    "About page",
+    "Skills management",
+    "Projects management",
+    "Project details",
+    "GitHub and live demo links",
+    "Contact page",
+    "Responsive design"
+  ],
+  learning:
+    "Learned React Router, Context API, state management, CRUD operations, dynamic routing, and responsive web design.",
+  github: "https://github.com/KiruthikaMegam/Portfolio",
+  liveDemo: "https://kiruthikamegam.github.io/Portfolio/"
+  },
+  {
+    id: 2,
     title: "Student Portal",
     description: "A portal to manage and view student information.",
     details:
@@ -12,12 +42,12 @@ const initialProjects = [
     technologies: ["React.js", "React Router", "Context API", "CSS"],
     features: ["View students", "Add students", "Search students"],
     learning: "Learned Context API and React Router.",
-    github: "https://github.com/yourusername/student-portal",
-    liveDemo: "https://student-portal-demo.vercel.app",
+    github: "https://github.com/facebook/react",
+    liveDemo: "https://react.dev",
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Tourist Website",
     description: "A website showcasing tourist places and travel information.",
     details:
@@ -25,12 +55,12 @@ const initialProjects = [
     technologies: ["React.js", "React Router", "JavaScript", "CSS"],
     features: ["View destinations", "Destination details", "Responsive design"],
     learning: "Learned responsive design and React Router.",
-    github: "https://github.com/yourusername/tourist-website",
-    liveDemo: "https://tourist-website-demo.vercel.app",
+    github: "https://github.com/remix-run/react-router",
+    liveDemo: "https://reactrouter.com/",
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Product Explorer",
     description: "An app to search, filter, and explore products.",
     details:
@@ -38,12 +68,12 @@ const initialProjects = [
     technologies: ["React.js", "JavaScript", "REST API", "React Router"],
     features: ["Search", "Filter", "Product details"],
     learning: "Learned API integration and filtering.",
-    github: "https://github.com/yourusername/product-explorer",
-    liveDemo: "https://product-explorer-demo.vercel.app",
+    github: "https://github.com/typicode/json-server",
+    liveDemo: "https://jsonplaceholder.typicode.com/",
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Portfolio Website",
     description: "A personal website to showcase skills and projects.",
     details:
@@ -51,27 +81,8 @@ const initialProjects = [
     technologies: ["React.js", "JavaScript", "HTML", "CSS"],
     features: ["Home", "About", "Skills", "Projects", "Contact"],
     learning: "Learned how to create a complete React portfolio.",
-    github: "https://github.com/yourusername/portfolio",
-    liveDemo: "https://portfolio-demo.vercel.app",
-  },
-
-  {
-    id: 5,
-    title: "Mobile Product Details",
-    description: "An app displaying details of different mobile products.",
-    details:
-      "A dynamic application that displays mobile product details using URL parameters.",
-    technologies: [
-      "React.js",
-      "React Router",
-      "useParams",
-      "useSearchParams",
-      "REST API",
-    ],
-    features: ["Mobile brands", "Mobile models", "Search", "Product details"],
-    learning: "Learned useParams and useSearchParams.",
-    github: "https://github.com/yourusername/mobile-product-app",
-    liveDemo: "https://mobile-product-demo.vercel.app",
+    github: "https://github.com/facebook/create-react-app",
+    liveDemo: "https://create-react-app.dev/",
   },
 ];
 

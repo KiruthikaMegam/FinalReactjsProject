@@ -6,23 +6,26 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #e6176e, #29deeb);
+  background: linear-gradient(135deg, #ed659e, #68e2eb);
   font-family: Georgia, "Times New Roman", Times, serif;
   color: white;
 }
 
 .header {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 7%;
-  width: 100%;
+  position: relative;
+  z-index: 100;
 }
 
 .header p {
-  color: #fff;
-  font-size: 20px;
+  color: white;
+  font-size: 22px;
   font-weight: bold;
+  margin: 0;
 }
 
 .portfolioFooter {
@@ -30,7 +33,7 @@ body {
   margin-top: 100px;
   padding: 90px 7% 30px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(40, 39, 39, 0.12);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
 }
@@ -45,7 +48,7 @@ body {
 
 .footerSmallText {
   display: inline-block;
-  color: #fff;
+  color: white;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -56,52 +59,73 @@ body {
 .footerCTA h2 {
   font-size: clamp(30px, 5vw, 60px);
   line-height: 0.95;
+
   font-weight: 800;
   text-transform: uppercase;
+
   letter-spacing: -3px;
+
   margin-bottom: 25px;
 }
 
 .footerCTA h2 span {
   color: #e6176e;
-  text-shadow: 0 5px 20px rgba(230, 23, 110, 0.3);
+
+  text-shadow:
+    0 5px 20px rgba(230, 23, 110, 0.3);
 }
 
 .footerCTA p {
   max-width: 480px;
+
   margin: 0 auto 30px;
+
   font-size: 15px;
   line-height: 1.8;
+
   color: white;
   opacity: 0.75;
 }
 
 .footerTalkButton {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 10px;
+
   padding: 12px 24px;
+
   background: #e6176e;
   color: white;
+
   text-decoration: none;
+
   border-radius: 10px;
+
   font-size: 15px;
   font-weight: 600;
+
   transition: 0.3s ease;
 }
 
 .footerTalkButton img {
   width: 18px;
   height: 18px;
+
   object-fit: contain;
+
   transition: 0.3s ease;
 }
 
 .footerTalkButton:hover {
   background: #c91460;
+
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(230, 23, 110, 0.25);
+
+  box-shadow:
+    0 8px 20px rgba(230, 23, 110, 0.25);
 }
 
 .footerTalkButton:hover img {
@@ -111,15 +135,20 @@ body {
 .footerLine {
   width: 100%;
   height: 1px;
+
   background: rgba(255, 255, 255, 0.2);
+
   margin-bottom: 25px;
 }
 
 .footerBottom {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   gap: 25px;
+
   position: relative;
   z-index: 2;
 }
@@ -127,6 +156,7 @@ body {
 .footerLogo {
   font-size: 25px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .footerLogo span {
@@ -135,52 +165,71 @@ body {
 
 .footerLinks {
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 25px;
 }
 
 .footerLinks a {
   color: white;
+
   text-decoration: none;
+
   font-size: 16px;
+
   opacity: 0.65;
-  transition: 0.3s;
+
+  transition: 0.3s ease;
 }
 
 .footerLinks a:hover {
   color: #e6176e;
+
   opacity: 1;
+
   transform: translateY(-2px);
 }
 
 .footerSocial {
   display: flex;
+
   align-items: center;
+
   gap: 20px;
 }
 
 .footerSocial a {
   width: 42px;
   height: 42px;
+
   display: flex;
+
   justify-content: center;
   align-items: center;
+
   border: 1px solid rgba(255, 255, 255, 0.25);
+
   border-radius: 50%;
+
   transition: 0.3s ease;
 }
 
 .footerSocial img {
   width: 20px;
   height: 20px;
+
   object-fit: contain;
+
   transition: 0.3s ease;
 }
 
 .footerSocial a:hover {
   background: #e6176e;
+
   border-color: #e6176e;
+
   transform: translateY(-3px);
 }
 
@@ -190,23 +239,32 @@ body {
 
 .footerCopyright {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   gap: 20px;
+
   margin-top: 25px;
   padding-top: 20px;
+
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+  position: relative;
   z-index: 2;
 }
 
 .footerCopyright p {
   font-size: 13px;
+
   color: white;
+
   opacity: 0.55;
 }
 
 .footerCopyright span {
   opacity: 1;
+
   font-weight: bold;
 }
 
@@ -220,23 +278,20 @@ body {
     padding: 70px 6% 25px;
   }
 
-  .footerBottom {
-    flex-wrap: wrap;
-  }
-
-  .footerLinks {
-    order: 3;
-    width: 100%;
+  .footerSocial {
     justify-content: center;
-    padding-top: 15px;
   }
 
+  .footerCTA h2 {
+    font-size: clamp(50px, 10vw, 45px);
+    letter-spacing: -1px;
+  }
 }
 
 @media (max-width: 550px) {
 
   .header {
-    flex-direction: column;
+    justify-content: space-between;
     gap: 15px;
     padding: 15px 20px;
   }
@@ -256,12 +311,11 @@ body {
 
   .footerSmallText {
     font-size: 10px;
-
     letter-spacing: 2px;
   }
 
   .footerCTA h2 {
-    font-size: clamp(36px, 10vw, 48px);
+    font-size: clamp(30px, 10vw, 45px);
     letter-spacing: -1px;
   }
 
@@ -271,19 +325,41 @@ body {
 
   .footerBottom {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    text-align: center;
+  }
+
+  .footerLogo {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
   }
 
   .footerLinks {
-    order: initial;
     width: 100%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 0;
+  }
+
+  .footerLinks a {
+    font-size: 15px;
   }
 
   .footerSocial {
+    justify-content: center;
+
     gap: 15px;
   }
 
@@ -299,8 +375,16 @@ body {
 
   .footerCopyright {
     flex-direction: column;
-    align-items: flex-start;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
     gap: 8px;
   }
 
+  .footerCopyright p {
+    font-size: 12px;
+  }
 }

@@ -41,7 +41,7 @@ const handleSubmit = (e) => {
           <img src={Email} alt="Email" />
           <div>
             <h4>Email</h4>
-            <a href="mailto:kiruthisekar97@gmail.com">abc@gmail.com</a>
+            <a href="mailto:kiruthisekar97@gmail.com">kiruthisekar97@gmail.com</a>
           </div>
         </div>
 
@@ -50,7 +50,7 @@ const handleSubmit = (e) => {
           <div>
             <h4>WhatsApp</h4>
             <a href="https://wa.me/919087762206" target="_blank" rel="noreferrer">
-              +91 9876543210
+              +91 9087762206
             </a>
           </div>
         </div>

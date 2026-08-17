@@ -122,14 +122,14 @@ export default function App() {
               </div>
               <div className="footerSocial">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/KiruthikaMegam"
                   target="_blank"
                   rel="noopener noreferrer">
                   <img src={Github} alt="GitHub" />
                 </a>
               
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/in/kiruthika-s-530869290"
                   target="_blank"
                   rel="noopener noreferrer">
                   <img src={LinkedIn} alt="LinkedIn" />

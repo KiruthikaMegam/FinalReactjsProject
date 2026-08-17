@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import "./ProjectDetails.css";
 import GitHUb from "../assets/github.png";
 import Delete from "../assets/delete.png";
@@ -11,8 +11,6 @@ export default function ProjectDetails() {
   const navigate = useNavigate();
 
   const {projects,deleteProject} = useContext(ProjectContext);
-  const [showDelete, setShowDelete] = useState(false);
-
 
   const project = projects.find((item) =>
       item.id === Number(projectDetails)
@@ -39,36 +37,14 @@ export default function ProjectDetails() {
   }
 
   const handleDelete = () => {
-    setShowDelete(true);
-  };
-
-  const confirmDelete = () => {
-    deleteProject(project.id);
-    navigate("/Projects");
-    alert("Project deleted successfully!");
-  };
+  deleteProject(project.id);
+  alert("Project Deleted Successfully");
+  navigate("/Projects");
+};
 
   return (
 
     <div className="projectDetailsPage">
-
-      {showDelete && (
-        <div className="deleteConfirmation">
-          <p>
-            Are you sure you want to delete this project?
-          </p>
-          <div>
-            <button onClick={confirmDelete}>
-              Yes, Delete
-            </button>
-
-            <button  onClick={() => setShowDelete(false)}>
-              Cancel
-            </button>
-          </div>
-        </div>
-
-      )}
 
       <div className="projectHeader">
         <h2>{project.title}</h2>

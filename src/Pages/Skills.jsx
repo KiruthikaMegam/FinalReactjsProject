@@ -1,4 +1,4 @@
-import React, {useContext,useState} from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import { SkillsContext } from "../Context/SkillsContext";
 import "./Skills.css";
@@ -9,41 +9,14 @@ import Delete from '../assets/delete.png'
 export default function Skills() {
 
   const {skills,deleteSkill} = useContext(SkillsContext);
-  const [deleteId, setDeleteId] = useState(null);
-  const [showConfirm, setShowConfirm] = useState(false);
 
   const handleDelete = (id) => {
-  setDeleteId(id);
-  setShowConfirm(true);
-  };
-
-  const confirmDelete = () => {
-  deleteSkill(deleteId);
-  setShowConfirm(false);
-  setDeleteId(null);
-  alert("Skill deleted successfully!");
+  deleteSkill(id);
+  alert("Skill Deleted Successfully");
   };
 
   return (
     <div className="skillsPage">
-
-      {showConfirm && (
-        <div className="confirmBox">
-          <h3>Delete Skill?</h3>
-               <p>Are you sure you want to delete this skill?</p>
-               <button onClick={confirmDelete}>
-                 Yes, Delete
-               </button>
-      
-               <button
-                 onClick={() => {
-                   setShowConfirm(false);
-                   setDeleteId(null);
-                 }}>
-                 Cancel
-                </button>
-        </div>
-      )}
 
       <div className="skillsHeader">
         <h1>My Skills</h1>
@@ -53,7 +26,7 @@ export default function Skills() {
             alt=""
             className="addSkillIcon"
           />
-          Add Skill
+           <span>Add Skill</span>
         </Link>
       </div>
 
