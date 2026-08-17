@@ -31,7 +31,7 @@ const initialProjects = [
   learning:
     "Learned React Router, Context API, state management, CRUD operations, dynamic routing, and responsive web design.",
   github: "https://github.com/KiruthikaMegam/FinalReactjsProject",
-  liveDemo: "kiruthikamegam.netlify.app"
+  liveDemo:"https://kiruthikamegam.netlify.app"
   },
   {
     id: 2,
