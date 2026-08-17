@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import Profile from '../assets/Profile.jpeg'
+import Profile from '../assets/Profile.jpg'
 import { NavLink } from 'react-router-dom'
 
 export default function Home() {
